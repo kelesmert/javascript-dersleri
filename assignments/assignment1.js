@@ -1,3 +1,6 @@
+// const prompt = require('prompt-sync')();
+
+
 const prompt = require('prompt-sync')();
 
 
@@ -5,11 +8,11 @@ const prompt = require('prompt-sync')();
 
 // 1- Bir kullanıcıdan adını ve yaşını alın. Ardından, bu bilgileri kullanarak "Merhaba, [ad]! Sen [yaş] yaşındasın." şeklinde bir çıktı üreten JavaScript kodunu yazın.
 
-    // let ad = prompt(`adinizi giriniz : `)
+    let ad = prompt(`adinizi giriniz : `)
 
-    // let yas = prompt(`yasinizi giriniz : `)
+    let yas = prompt(`yasinizi giriniz : `)
 
-    // console.log(`merhaba ${ad},sen ${yas} yasindasin.`)
+    console.log(`merhaba ${ad},sen ${yas} yasindasin.`)
 
 
 // 2- Bir değişken tanımlayarak bir sayıyı saklayın ve bu sayıyı 2 ile çarpıp sonucu ekrana yazdıran bir JavaScript programı yazın.
