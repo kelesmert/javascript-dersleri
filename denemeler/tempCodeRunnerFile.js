@@ -1,1 +1,1 @@
- console.log(b);
+   // console.log(Object.keys(array[index])); 
