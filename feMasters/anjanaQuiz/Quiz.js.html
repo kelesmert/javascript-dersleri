@@ -44,6 +44,12 @@
             font-size: medium;
             border-radius: 5px;
         }
+        .hover-red:hover {
+            background-color: #ff0000; /* Change to your desired hover color */
+        }
+        .hover-blue:hover {
+            background-color: #4800ff; /* Change to your desired hover color */
+        }
         .correct {
             background-color: lightgreen;
         }
@@ -64,8 +70,8 @@
     </div>
 
     <div id="options">
-        <button name="true" value="true">true</button>
-        <button name="false" value="false">false</button>
+        <button name="true" value="true" class="hover-red"  >true</button>
+        <button name="false" value="false" class="hover-blue" disabled="">false</button>
     </div>
 
     <div id="explanation">
@@ -85,8 +91,14 @@
 
     // optionButtons should be all the elements within the "options" div
 
-    const optionButtons = document.getElementById("options")
+    const optionButtons = document.getElementById("options").children
     // explanation should be the "explanation" div
+
+    
+    // const yenib = optionButtons.children[0]
+    // const yenic = optionButtons.children[1]
+
+    
     
     const explanation = document.getElementById("explanation")
 
@@ -96,8 +108,8 @@
     
     const fact = {
 
-        statement : "adas",
-        true :"this is true",
+        statement : "this is statement",
+        answer :true,
         explanation : "this is explanation"
 
     }
@@ -111,15 +123,48 @@
     // disable(button) should set the button element's attribute "disabled" to the value ""
     // enable(button) should remove the attribute "disabled" from the button element
 
+    function disable (button) {
+
+        button.setAttribute("disabled","")
+
+    }
+
+    function enable (button) {
+
+        button.removeAttribute("disabled")
+    }
+
+    // disable(yenib)
+
+    // enable(yenic)
+
+    
+
 
 
     // TODO 5: Declare an isCorrect function that compares a guess to the right answer
     // isCorrect(guess) should return true if the guess matches the fact's answer
     
+    const isCorrect = (guess) =>{
+
+        return guess === fact.answer;
+    }  
+
+
+    
 
 
     // TODO 6A: Use a for loop to add a click event listener to each of the optionButtons
             // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
+
+    for (let button of optionButtons){
+        button.addEventListener("click", (event) => {
+
+            explanation.textContent = fact.explanation;
+
+
+        })
+    }
 
 
             // TODO 7: Within the event handler function, 

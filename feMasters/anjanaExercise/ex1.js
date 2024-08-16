@@ -23,6 +23,7 @@ function longerThan(array1,array2){
    if(array1.length == array2.length){
 
     console.log("bu iki dizi de esit uzunkukta");
+    return `${array1} == ${array2}`;
 
    }
 
@@ -42,5 +43,32 @@ dizi2 = [12,312,312,41,1,1,1,1]
 
 buyukdizi = longerThan(dizi1,dizi2)
 
-console.log(buyukdizi)
+console.log(buyukdizi) 
+
+//------------------------------------------------
+
+// Exercise
+// In the console, declare the following functions using arrow functions:
+
+// divide: given 2 numbers, return the first divided by the second
+// whisper: given an uppercase string, log it in all lowercase to the console
+// shorterThan: given 2 arrays, return whether the first is shorter than the second
+
+
+const divide = (n1,n2) => n1/n2;
+
+console.log(divide(6,3));
+
+const whisper = (string) => string.toLowerCase();
+
+console.log(whisper("kjabdjsdnfSGJSDFJS"))
+
+const shorterThan = (array1,array2) => array1.length>array2.length;
+
+aDizi1 = [1,1,2]
+
+aDizi2 = [1,4]
+
+console.log(shorterThan(aDizi1,aDizi2))
+
 
