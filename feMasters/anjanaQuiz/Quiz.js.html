@@ -71,7 +71,7 @@
 
     <div id="options">
         <button name="true" value="true" class="hover-red"  >true</button>
-        <button name="false" value="false" class="hover-blue" disabled="">false</button>
+        <button name="false" value="false" class="hover-blue">false</button>
     </div>
 
     <div id="explanation">
@@ -147,7 +147,7 @@
     
     const isCorrect = (guess) =>{
 
-        return guess === fact.answer;
+        return guess === fact.answer.toString();
     }  
 
 
@@ -158,13 +158,28 @@
             // TODO 6B: Within the event handler function, display the fact's explanation by setting the text of the explanation element
 
     for (let button of optionButtons){
+ 
         button.addEventListener("click", (event) => {
 
             explanation.textContent = fact.explanation;
 
+            isCorrect(button.value) ? button.classList.add("correct") : button.classList.add("incorrect")
+            
+            console.log(isCorrect(button.value))
+
+            
+           
+            for(let x of optionButtons){  
+
+                disable(x)
+            }
+            
 
         })
-    }
+        
+        
+        
+    };
 
 
             // TODO 7: Within the event handler function, 
